@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #app {
+        padding: 0;
+      }
+      header {
+        background-color: antiquewhite;
+        padding: 4px;
+      }
+      ul {
+        display: flex;
+        padding: 4px;
+        list-style-type: none;
+        text-decoration: none !important;
+      }
+      ul > li {
+        padding-right: 4px;
+        margin-right: 1rem;
+      }
+      li:last-child {
+        /* flex */
+      }
+      .main {
+        background-color: gray;
+        border: 1px solid gray;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 4px;
+      }
+      .child {
+        padding: 4px;
+        margin: 4px;
+        background-color: pink;
+      }
+      .child:first-child {
+        flex-shrink: 0;
+      }
+      .child:last-child {
+        order: 4;
+      }
+      .search-block {
+        padding: 1rem;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contactus">Contact Us</a></li>
+          <li>
+            <a href="/"><i class="fa fa-bars"></i></a>
+          </li>
+        </ul>
+      </header>
+      <h1>JS examples</h1>
+      <div class="main">
+        <div class="child">A block</div>
+        <div class="child">B block</div>
+        <div class="child">C block</div>
+        <div class="child">D block</div>
+        <div class="child">E block</div>
+        <div class="child">F block</div>
+        <div class="child">G block</div>
+      </div>
+    </div>
+    <button id="ClickMe">ClickMe</button>
+    <div class="search-block">
+      <!-- <input
+        type="text"
+        onkeyup="betterFunction()"
+        placeholder="search here.."
+      /> -->
+    </div>
+    <div
+      style="
+        background-color: antiquewhite;
+        border: 1px solid antiquewhite;
+        padding: 10px;
+        width: 200px;
+      "
+      id="grand-parent-div"
+    >
+      <span
+        id="parent-div"
+        style="width: 100px; background-color: aqua; padding: 10px"
+      >
+        <button
+          id="child-btn"
+          style="width: 50px; background-color: brown; padding: 2px"
+        >
+          Click
+        </button>
+      </span>
+    </div>
+    <div class="event-delegation">
+      <ul id="parent-ul">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+      </ul>
+    </div>
+    <script src="./callBrReferenceandCallByValue.js"></script>
+  </body>
+</html>
